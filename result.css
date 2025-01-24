@@ -1,0 +1,76 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 10px 200px; /* 여백 줄이기 */
+    background-color: #4b2f1a; /* 배경색을 어두운 색으로 설정 */
+    color: white; /* 글자색을 흰색으로 설정 */
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.report {
+    color: white;
+    padding: 10px;
+    max-width: 100%;
+    margin: 0 30px;
+    margin-left: 80px; /* 기존 여백 유지 */
+    text-align: left;
+}
+
+/* 결과 섹션 컨테이너 좌측 여백 40px 추가 */
+.results-container {
+    width: 1040px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:30px;
+    gap: 20px;
+}
+
+.result-section {
+    flex: 0 1 calc(50% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.result-text {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.result-image {
+    width: 500px;
+    height: auto;
+    text-align: center;
+}
+
+.result-image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
