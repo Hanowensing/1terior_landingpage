@@ -52,51 +52,137 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>유료 서비스 안내</h1>
-        <p>여기까지는 무료 버전입니다. 인테리어 의뢰서를 제작하려면 아래 요금제를 선택하세요.</p>
-        
-        <ul>
-            <li>기본 버전: 5,000원</li>
-            <li>프리미엄 버전: 10,000원</li>
-        </ul>
+<div class="container">
+    <h1>유료 서비스 안내</h1>
+    <p>여기까지는 무료 버전입니다. 인테리어 의뢰서를 제작하려면 아래 요금제를 선택하세요.</p>
+    
+    <ul>
+        <li>기본 버전: 5,000원  (단순한 도면)</li>
+        <li>프리미엄 버전: 10,000원  (상세 도면+인테리어 제안서)</li>
+    </ul>
 
-        <p>
-            저희 <strong>원테리어</strong>는 대학생 모임으로, 3D 렌더링 기술은 부족하지만 
-            <br> <strong>예산에 맞춘 가구 추천과 개인 맞춤 인테리어 서비스</strong>를 
-            <span class="highlight">합리적인 가격</span>에 제공합니다.
-        </p>
+    <p>
+        저희 <strong>원테리어</strong>는 창업을 준비 중인 팀으로써
+        <br> <strong>예산에 맞춘 가구 추천과 개인 맞춤 인테리어 서비스</strong>를 
+        <span class="highlight">합리적인 가격</span>에 제공합니다.
+    </p>
 
-        <p> 더불어 모든 팀원들의 자취 경험이 풍부하여, 
-            <br> 실제 생활에서의 필요와 고민을 반영한 현실적이고 합리적인 인테리어 서비스</strong>를 제공합니다.
-            </p>
-        
-            <p>
-            <br> 일반적인 온라인 인테리어 컨설팅 비용은 
-            <span class="highlight">평당 3~4만원으로</span>, 
-           <br> <span class="highlight">원룸의 경우 약 20만원</span>이 소요됩니다.
-        </p>
-        
-        <p>
-            하지만 <strong>원테리어</strong>는 단 <span class="highlight">5,000원~10,000원</span>으로, 
-            <br> <strong>비교할 수 없는 저렴한 가격</strong>에 인테리어 제안서를 제공합니다.
-        </p>
-        
-        <p>
-            <br> <br> 최고의 서비스를 보장할 순 없지만, 
-            <strong>가격 대비 최고의 만족</strong>을 약속드립니다.
-        </p>
+    <p>
+        더불어 팀원들의 풍부한 자취 경험과 지식에 기반하여, 
+        <br> 실제 생활에서의 필요와 고민을 반영한 현실적이고 합리적인 인테리어 서비스를 제공합니다.
+    </p>
+    
+    <p>
+        <br> 일반적인 온라인 인테리어 컨설팅 비용은 
+        <span class="highlight">평당 3~4만원</span>으로, 
+        <br> <span class="highlight">원룸의 경우 약 20만원</span>이 소요됩니다.
+    </p>
+    
+    <p>
+        하지만 <strong>원테리어</strong>는 단 <span class="highlight">5,000원~10,000원</span>으로, 
+        <br> <strong>비교할 수 없는 저렴한 가격</strong>에 인테리어 제안서를 제공합니다.
+    </p>
+    
+    <p>
+        <br><br> 최고의 서비스를 보장할 순 없지만, 
+        <strong>가격 대비 최고의 만족</strong>을 약속드립니다.
+    </p>
 
-        <div class="payment-info">
-<br> 
-            <p>입금 계좌: <strong>356-1488-8305-13 (한형준)</strong></p>
-            <p>입금 확인 후 <strong>인테리어 의뢰 전문 웹사이트가 발송됩니다.</p>
-        </div>
-
-        <div class="contact">
-            <p>궁금한 사항이 있으시면 문의해주세요.</p>
-        </div>
+    <div class="payment-info">
+        <br> 
+        <p>입금 계좌: <strong>356-1488-8305-13 (한형준)</strong></p>
+        <p>입금 확인 후 <strong>인테리어 의뢰 전문 웹사이트가 발송됩니다.</strong></p>
+    
+        <!-- ID를 추가하여 JS에서 쉽게 선택 가능하게 함 -->
+        <form id="paymentForm" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <label for="name" style="font-weight: bold;">이름:</label>
+                <input type="text" id="name" name="name" required placeholder="홍길동" 
+                    style="padding: 10px; width: 300px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+    
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <label for="email" style="font-weight: bold;">이메일 주소:</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com"
+                    style="padding: 10px; width: 300px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+    
+            <button type="submit"
+                style="padding: 10px 20px; background-color: #2c3e50; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+                제출
+            </button>
+        </form>
     </div>
+
+    <div class="contact">
+        <p>궁금한 사항이 있으시면 인스타로 문의해주시기 바랍니다.
+        <br> 인스타 ID: 1terior_</p>
+
+        <p>고객 한 분 한 분에게 최선을 다하는 원테리어가 되겠습니다. 감사합니다.</p>
+    </div>
+</div>
+
+<!-- Supabase로 데이터 전송을 위한 JS 코드 -->
+<script>
+    // 1) Supabase 프로젝트 URL 및 익명 API 키
+    const SUPABASE_URL = "https://fvoauhyvsyntgjepkqgk.supabase.co"; 
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ2b2F1aHl2c3ludGdqZXBrcWdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMyMDE2NzcsImV4cCI6MjA0ODc3NzY3N30.PzyKXN_ni8GTz7hAJsoGfGgCxmShwvQ4VZwdyf5k6Go";
+
+    // 2) 폼 제출 이벤트 처리
+    document.getElementById("paymentForm").addEventListener("submit", async function(event) {
+        event.preventDefault(); // 폼의 기본 동작(새로고침) 막기
+
+        // (a) 사용자가 입력한 이름과 이메일
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+
+        // (b) 로컬 스토리지에서 가져온 분석 결과
+        //     finalResults 안에 style, tone, lighting, focalPoint, complexity 등이 있다고 가정
+        const finalResults = JSON.parse(localStorage.getItem("finalResults")) || {};
+
+        // 필요한 데이터를 각각 추출 (배열 형태라면 문자열로 join)
+        const style = finalResults.style ? finalResults.style.join(", ") : "";
+        const tone = finalResults.tone ? finalResults.tone.join(", ") : "";
+        const lighting = finalResults.lighting ? finalResults.lighting.toString() : "";  // 단일값 or 배열
+        const focalPoint = finalResults.focalPoint ? finalResults.focalPoint.toString() : "";
+        const complexity = finalResults.complexity ? finalResults.complexity.toString() : "";
+
+        // (c) Supabase에 저장할 데이터 구성
+        const data = {
+            name: name,
+            email: email,
+            style: style,
+            tone: tone,
+            lighting: lighting,
+            focalPoint: focalPoint,
+            complexity: complexity
+        };
+
+        try {
+            // (d) Supabase REST API 호출 (INSERT)
+            const response = await fetch(`${SUPABASE_URL}/rest/v1/survey_results`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "apikey": SUPABASE_ANON_KEY,
+                    "Authorization": `Bearer ${SUPABASE_ANON_KEY}`  // 인증 토큰
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                alert("신청이 정상적으로 완료되었습니다! 감사합니다.");
+                // 폼 초기화
+                document.getElementById("paymentForm").reset();
+            } else {
+                alert("데이터 저장에 실패했습니다. 다시 시도해주세요.");
+            }
+        } catch (error) {
+            console.error("오류 발생:", error);
+            alert("오류가 발생했습니다. 네트워크 상태를 확인해주세요.");
+        }
+    });
+</script>
 
 </body>
 </html>
