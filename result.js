@@ -7,6 +7,7 @@ const resultContainer = document.getElementById('resultContainer');
 resultContainer.style.marginLeft = "50px";
 resultContainer.style.marginRight = "50px";
 
+
 /* 
   조명, 인테리어 포인트, 복잡성 
   각각 선택된 값에 따라 보여줄 이미지 매핑 객체

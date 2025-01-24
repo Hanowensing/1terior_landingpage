@@ -130,60 +130,69 @@
 
     // 2) 폼 제출 이벤트 처리
     document.getElementById("paymentForm").addEventListener("submit", async function(event) {
-        event.preventDefault(); // 폼의 기본 동작(새로고침) 막기
+    event.preventDefault(); // 폼의 기본 동작(새로고침) 막기
 
-        // (a) 사용자가 입력한 이름과 이메일
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
+    // (a) 사용자가 입력한 이름과 이메일
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
 
-        // (b) 로컬 스토리지에서 가져온 분석 결과
-        //     finalResults 안에 style, tone, lighting, focalPoint, complexity 등이 있다고 가정
-        const finalResults = JSON.parse(localStorage.getItem("finalResults")) || {};
+    // (b) 로컬 스토리지에서 가져온 분석 결과
+    const finalResults = JSON.parse(localStorage.getItem("finalResults")) || {};
 
-        // 필요한 데이터를 각각 추출 (배열 형태라면 문자열로 join)
-        const style = finalResults.style ? finalResults.style.join(", ") : "";
-        const tone = finalResults.tone ? finalResults.tone.join(", ") : "";
-        const lighting = finalResults.lighting ? finalResults.lighting.toString() : "";  // 단일값 or 배열
-        const focalPoint = finalResults.focalPoint ? finalResults.focalPoint.toString() : "";
-        const complexity = finalResults.complexity ? finalResults.complexity.toString() : "";
+    // (c) 각 항목에서 '배열인 경우 첫 번째 요소'만 꺼내기
+    //     배열이 아닐 수도 있으니 삼항 연산자를 사용해 안전하게 처리
+    const styleValue = Array.isArray(finalResults.style) ? finalResults.style.join(", ") : finalResults.style || "";
+    const toneValue = Array.isArray(finalResults.tone) ? finalResults.tone.join(", ") : finalResults.tone || "";
 
-        // (c) Supabase에 저장할 데이터 구성
-        const data = {
-            name: name,
-            email: email,
-            style: style,
-            tone: tone,
-            lighting: lighting,
-            focalPoint: focalPoint,
-            complexity: complexity
-        };
+    const lightingValue = Array.isArray(finalResults.lighting)
+        ? finalResults.lighting[0] // 첫 번째 요소만
+        : finalResults.lighting || ""; // 문자열이라면 그대로
 
-        try {
-            // (d) Supabase REST API 호출 (INSERT)
-            const response = await fetch(`${SUPABASE_URL}/rest/v1/survey_results`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "apikey": SUPABASE_ANON_KEY,
-    "Authorization": `Bearer ${SUPABASE_ANON_KEY}`
-  },
-  body: JSON.stringify(data)
+    const focalPointValue = Array.isArray(finalResults.focalPoint)
+        ? finalResults.focalPoint[0]
+        : finalResults.focalPoint || "";
+
+    const complexityValue = Array.isArray(finalResults.complexity)
+        ? finalResults.complexity[0]
+        : finalResults.complexity || "";
+
+    // (d) Supabase에 저장할 데이터 구성 (최상위 하나만)
+    const data = {
+        name: name,
+        email: email,
+        style: styleValue,
+        tone: toneValue,
+        lighting: lightingValue,
+        focalPoint: focalPointValue,
+        complexity: complexityValue
+    };
+
+    // (e) Supabase REST API 호출
+    try {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/survey_results`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "apikey": SUPABASE_ANON_KEY,
+                "Authorization": `Bearer ${SUPABASE_ANON_KEY}`
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            alert("신청이 정상적으로 완료되었습니다! 감사합니다.");
+            document.getElementById("paymentForm").reset();
+        } else {
+            const errorResult = await response.json();
+            console.error("에러 내용:", errorResult);
+            alert("데이터 저장에 실패했습니다. 다시 시도해주세요.");
+        }
+    } catch (error) {
+        console.error("오류 발생:", error);
+        alert("오류가 발생했습니다. 네트워크 상태를 확인해주세요.");
+    }
 });
 
-if (response.ok) {
-  alert("신청이 정상적으로 완료되었습니다! 감사합니다.");
-} else {
-  // **응답 본문을 찍어보기**
-  const errorResult = await response.json();
-  console.error("에러 내용:", errorResult);
-  alert("데이터 저장에 실패했습니다. 다시 시도해주세요.");
-}
-
-        } catch (error) {
-            console.error("오류 발생:", error);
-            alert("오류가 발생했습니다. 네트워크 상태를 확인해주세요.");
-        }
-    });
 </script>
 
 </body>
