@@ -189,16 +189,16 @@ function generateQuestions() {
 }
 
 // ----- 이미지 사전 로딩 -----
+
+// 이미지 사전 로딩
 function preloadImages() {
     const loadingMessage = document.getElementById('loadingMessage');
     const imageContainer = document.getElementById('image-container');
     const title = document.querySelector('h1');
     const subtitle = document.querySelector('h2');
-    const countdownElement = document.getElementById('countdown');
 
     loadingMessage.style.display = 'block';
 
-    // 모든 DB 이미지를 로딩
     const promises = imageDatabase.map(image => {
         const img = new Image();
         img.src = `images/${image.fileName}`;
@@ -208,26 +208,19 @@ function preloadImages() {
     });
 
     Promise.all(promises).then(() => {
-        // 모든 이미지 로딩 후 3초 카운트다운
-        let countdown = 3;
-        countdownElement.textContent = countdown;
-
-        const timer = setInterval(() => {
-            countdown -= 1;
-            countdownElement.textContent = countdown;
-
-            if (countdown <= 0) {
-                clearInterval(timer);
-                loadingMessage.style.display = 'none';
-                countdownElement.parentElement.style.display = 'none';
-                title.style.display = 'block';
-                subtitle.style.display = 'block';
-                imageContainer.style.display = 'flex';
-                renderImage(); // 첫 화면 렌더
-            }
-        }, 1000);
+        loadingMessage.style.display = 'none';
+        title.style.display = 'block';
+        subtitle.style.display = 'block';
+        imageContainer.style.display = 'flex';
+        renderImage();
     });
 }
+
+// window.onload 초기화
+window.onload = () => {
+    preloadImages();
+    generateQuestions();
+};
 
 // ----- renderImage: 짝수 인덱스+짝수+1 인덱스 = 한 화면 -----
 function renderImage() {
@@ -317,8 +310,6 @@ function displayResults() {
         message: resultMessage
     }));
 
-    // 결과 표시
-    alert(resultMessage);
 
     // result.html 이동 (결과 페이지)
     window.location.href = 'result.html';
