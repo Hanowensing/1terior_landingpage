@@ -7,6 +7,8 @@ body {
     height: 100vh; /* 전체 화면 높이 */
     margin: 0; /* 기본 여백 제거 */
     text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* 로딩 메시지 스타일 */
@@ -41,15 +43,19 @@ h2 {
 #image-container {
     display: flex; /* Flexbox를 사용하여 이미지를 나란히 배치 */
     justify-content: center; /* 중앙 정렬 */
-    gap: 20px;
+    align-items: center;
+    gap: 40px; /* 간격 증가 */
     display: none; /* 초기에는 숨김 */
+    max-width: 100%;
+    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
 }
 
 /* 이미지 스타일 */
 #styleImage, #styleImage2 {
-    width: 650px; /* 기본 크기 */
-    height: 450px; /* 기본 크기 */
-    object-fit: cover; /* 비율 유지하며 잘림 방지 */
+    width: 100%; /* 부모 요소에 맞게 크기 조정 */
+    max-width: 750px; /* 최대 너비 확대 */
+    height: auto; /* 비율 유지 */
+    object-fit: contain; /* 이미지가 잘리지 않도록 조정 */
     cursor: pointer;
     border: 2px solid #ddd;
     border-radius: 10px;
@@ -59,11 +65,17 @@ h2 {
    반응형 스타일 적용 
 ================================ */
 
+/* 화면 너비 1400px 이하일 때 */
+@media (max-width: 1400px) {
+    #styleImage, #styleImage2 {
+        max-width: 700px; /* 크기 조정 */
+    }
+}
+
 /* 화면 너비 1200px 이하일 때 */
 @media (max-width: 1200px) {
     #styleImage, #styleImage2 {
-        width: 500px;
-        height: 350px;
+        max-width: 650px; /* 크기 조정 */
     }
 }
 
@@ -76,7 +88,7 @@ h2 {
         font-size: 1.4em;
     }
     #styleImage, #styleImage2 {
-        width: 50%; /* 이미지 크기를 50%로 축소 */
+        max-width: 600px; /* 크기 조정 */
     }
 }
 
@@ -85,8 +97,11 @@ h2 {
     h2 {
         font-size: 1.2em;
     }
+    #image-container {
+        flex-direction: column; /* 작은 화면에서는 세로로 배치 */
+    }
     #styleImage, #styleImage2 {
-        width: 45%;
+        max-width: 90%; /* 이미지 크기 조정 */
     }
 }
 
@@ -96,7 +111,7 @@ h2 {
         font-size: 1em;
     }
     #styleImage, #styleImage2 {
-        width: 40%;
+        max-width: 95%; /* 이미지 크기 최대한 키우기 */
     }
 }
 
@@ -106,6 +121,6 @@ h2 {
         font-size: 0.9em;
     }
     #styleImage, #styleImage2 {
-        width: 35%;
+        max-width: 100%; /* 작은 화면에서는 100%로 설정 */
     }
 }
