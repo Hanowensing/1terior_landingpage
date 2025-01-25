@@ -5,64 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interior Style Recommendation</title>
     <link rel="stylesheet" href="survey.css">
-    <style>
-        body {
-            display: flex; /* Flexbox를 사용하여 중앙 정렬 */
-            justify-content: center; /* 수평 중앙 정렬 */
-            align-items: center; /* 수직 중앙 정렬 */
-            height: 100vh; /* 전체 화면 높이 */
-            margin: 0; /* 기본 여백 제거 */
-            text-align: center; /* 텍스트 중앙 정렬 */
-        }
-        #loadingMessage {
-            font-size: 1.5em; /* 로딩 메시지 크기 */
-            margin-top: 20px; /* 위쪽 여백 */
-        }
-        #timer {
-            font-size: 3em; /* 타이머 크기 */
-            position: absolute; /* 절대 위치 설정 */
-            top: calc(420px); /* 로딩 메시지 아래 30px 위치 */
-            left: 50%; /* 중앙 정렬 */
-            transform: translateX(-30%);  /* 로딩 메시지 아래 30px 위치 */
-        }
-        #image-container {
-            display: flex; /* Flexbox를 사용하여 이미지를 나란히 배치 */
-            justify-content: space-around; /* 이미지 간의 간격 조정 */
-            margin-bottom: 40px; /* 버튼과 이미지 간의 간격 */
-            margin-top: 170px;
-            gap: 20px;
-            display: none; /* 초기에는 숨김 */
-            position: relative; /* 자식 요소의 절대 위치를 위한 설정 */
-        }
-        #styleImage, #styleImage2 {
-            width: 650px; /* 고정된 너비 설정 */
-            height: 450px; /* 고정된 높이 설정 */
-            object-fit: cover; /* 비율 유지하며 잘림 방지 */
-            cursor: pointer;   /* 클릭 가능한 느낌 */
-        }
-        h1, h2 {
-            position: absolute; /* 절대 위치 설정 */
-            color: black; /* 텍스트 색상 검정색 */
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* 텍스트 그림자 추가 */
-        }
-        h1 {
-            top: calc(20px); /* 상단 위치 (20px 위) */
-            left: 50%; /* 중앙 정렬 */
-            transform: translateX(-50%); /* 중앙 정렬 보정 */
-            font-size: 2.5em; /* 제목 크기 조정 */
-            display: none; /* 초기에는 숨김 */
-        }
-        h2 {
-            top: calc(110px); /* 제목 아래 위치 (60px) */
-            left: 50%; /* 중앙 정렬 */
-            transform: translateX(-50%); /* 중앙 정렬 보정 */
-            font-size: 1.5em; /* 부제목 크기 조정 */
-            display: none; /* 초기에는 숨김 */
-        }
-        .small-text {
-            font-size: 12px; /* 작은 텍스트 크기 */
-        }
-    </style>
+   
 </head>
 <body>
     <div id="loadingMessage">사진을 불러오고 있습니다...</div> <!-- 로딩 메시지 추가 -->

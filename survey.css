@@ -1,0 +1,111 @@
+/* 전체 페이지 중앙 정렬 */
+body {
+    display: flex; /* Flexbox를 사용하여 중앙 정렬 */
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 전체 화면 높이 */
+    margin: 0; /* 기본 여백 제거 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 로딩 메시지 스타일 */
+#loadingMessage {
+    font-size: 1.5em; /* 로딩 메시지 크기 */
+    margin-top: 20px; /* 위쪽 여백 */
+}
+
+/* 제목 및 부제목 스타일 */
+h1 {
+    font-size: 2.5em;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px; /* h2와의 간격 유지 */
+    display: none; /* 초기에는 숨김 */
+}
+
+h2 {
+    font-size: 1.5em;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px; /* 이미지와의 간격 유지 */
+    display: none; /* 초기에는 숨김 */
+}
+
+/* 작은 텍스트 스타일 */
+.small-text {
+    font-size: 12px;
+}
+
+/* 이미지 컨테이너 스타일 */
+#image-container {
+    display: flex; /* Flexbox를 사용하여 이미지를 나란히 배치 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 20px;
+    display: none; /* 초기에는 숨김 */
+}
+
+/* 이미지 스타일 */
+#styleImage, #styleImage2 {
+    width: 650px; /* 기본 크기 */
+    height: 450px; /* 기본 크기 */
+    object-fit: cover; /* 비율 유지하며 잘림 방지 */
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* ===============================
+   반응형 스타일 적용 
+================================ */
+
+/* 화면 너비 1200px 이하일 때 */
+@media (max-width: 1200px) {
+    #styleImage, #styleImage2 {
+        width: 500px;
+        height: 350px;
+    }
+}
+
+/* 화면 너비 992px 이하일 때 */
+@media (max-width: 992px) {
+    h1 {
+        display: none; /* 제목 숨김 */
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    #styleImage, #styleImage2 {
+        width: 50%; /* 이미지 크기를 50%로 축소 */
+    }
+}
+
+/* 화면 너비 768px 이하일 때 */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.2em;
+    }
+    #styleImage, #styleImage2 {
+        width: 45%;
+    }
+}
+
+/* 화면 너비 576px 이하일 때 */
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1em;
+    }
+    #styleImage, #styleImage2 {
+        width: 40%;
+    }
+}
+
+/* 화면 너비 400px 이하일 때 */
+@media (max-width: 400px) {
+    h2 {
+        font-size: 0.9em;
+    }
+    #styleImage, #styleImage2 {
+        width: 35%;
+    }
+}
