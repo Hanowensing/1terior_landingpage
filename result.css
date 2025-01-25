@@ -5,6 +5,10 @@ body {
     margin: 10px 200px; /* 기본 여백 */
     background-color: #4b2f1a; /* 배경색을 어두운 색으로 설정 */
     color: white; /* 글자색을 흰색으로 설정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 제목 스타일 */
@@ -32,49 +36,50 @@ h3 {
 /* 결과 보고서 스타일 */
 .report {
     color: white;
-    padding: 20px;
+    padding: 40px; /* 기존 20px에서 20px 증가 */
     max-width: 100%;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 /* 결과 컨테이너 스타일 */
 .results-container {
     width: 100%;
-    max-width: 1040px;
+    max-width: 1080px; /* 기존 1040px에서 20px 증가 */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin-top: 30px;
     gap: 20px;
 }
 
 .result-section {
-    flex: 1 1 calc(50% - 20px); /* 화면 크기에 따라 조절 */
+    flex: 1 1 calc(50% - 20px);
     box-sizing: border-box;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    max-width: 500px;
+    max-width: 520px; /* 기존 500px에서 20px 증가 */
 }
 
 /* 텍스트 스타일 */
 .result-text {
     text-align: center;
-    padding: 0 20px;
+    padding: 20px 40px; /* 기존 20px에서 20px 증가 */
 }
 
 /* 이미지 스타일 */
 .result-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 520px; /* 기존 500px에서 20px 증가 */
     text-align: center;
 }
 
 .result-image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 520px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -82,7 +87,7 @@ h3 {
 
 /* 버튼 스타일 */
 button {
-    padding: 15px 30px;
+    padding: 20px 40px; /* 기존 15px 30px에서 20px 40px 증가 */
     font-size: 1.2em;
     background-color: #f4a261;
     border: none;
@@ -104,7 +109,7 @@ button:hover {
 /* 화면 너비 1200px 이하일 때 */
 @media (max-width: 1200px) {
     body {
-        margin: 10px 100px; /* 여백 축소 */
+        margin: 10px 100px;
     }
 
     .results-container {
