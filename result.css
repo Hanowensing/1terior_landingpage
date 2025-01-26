@@ -195,21 +195,14 @@ button:hover {
     h2 {
         font-size: 1.1em;
     }
-    .result-section {
-        width: 90%;
-    }
     .button {
         font-size: 1em;
         padding: 12px 20px;
     }
-    .result-image img{
-        max-width: 90%;
-        border-radius: 5px;
+    .result-section {
+        width: 100%
     }
-    .result-text img{
-        max-width: 90%;
-        border-radius: 5px;
-
+    .result-image {
+        max-width: 100%;
     }
 }
-
