@@ -92,12 +92,13 @@ img:hover {
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
-        padding: 0 50px;
+        padding: 50px;
         align-items: center;
     }
     .text-container {
         padding: 100px 20px 20px;
         text-align: center;
+        margin-top: 40px; /* 위쪽 여백 추가 */
     }
     .image-container {
         padding: 20px 20px 0;
@@ -117,6 +118,7 @@ img:hover {
     }
     .text-container {
         padding: 80px 10px 20px;
+        margin-top: 40px; /* 위쪽 여백 추가 */
     }
     h1 {
         font-size: 2em;
@@ -137,6 +139,7 @@ img:hover {
     }
     .text-container {
         padding: 60px 10px 20px;
+        margin-top: 40px; /* 위쪽 여백 추가 */
     }
     h1 {
         font-size: 1.8em;

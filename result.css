@@ -107,45 +107,6 @@ button:hover {
 ================================ */
 
 /* 화면 너비 1200px 이하일 때 */
-@media (max-width: 1200px) {
-    body {
-        margin: 10px 100px;
-    }
-
-    .results-container {
-        gap: 15px;
-    }
-
-    .result-section {
-        flex: 1 1 calc(50% - 15px);
-    }
-
-    h1 {
-        font-size: 2.2em;
-    }
-}
-
-/* 화면 너비 992px 이하일 때 */
-@media (max-width: 992px) {
-    body {
-        margin: 10px 50px;
-    }
-
-    .results-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .result-section {
-        width: 80%;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-}
-
-/* 화면 너비 768px 이하일 때 */
 @media (max-width: 768px) {
     body {
         margin: 10px 30px;
@@ -161,6 +122,12 @@ button:hover {
 
     .result-section {
         width: 100%;
+    }
+
+    .result-image img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover; /* 비율 유지 및 크기 조정 */
     }
 }
 
@@ -180,6 +147,12 @@ button:hover {
 
     .result-section {
         width: 100%;
+    }
+
+    .result-image img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover; /* 비율 유지 및 크기 조정 */
     }
 
     .result-image img {
@@ -205,7 +178,13 @@ button:hover {
         width: 100%;
     }
 
-    button {
+    .result-image img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover; /* 비율 유지 및 크기 조정 */
+    }
+
+    .button {
         font-size: 1em;
         padding: 12px 20px;
     }

@@ -143,7 +143,7 @@ if (results.lighting) {
                 <div class="result-text" style="text-align:center;">
                     <!-- 이미지 크기를 600x400으로 2배 확대 -->
                     <img src="${lightingImg}" alt="${bestLighting}" 
-                         style="width:500px; height:400px; object-fit:contain; margin-bottom:15px;">
+                         style="width:520px; height:400px; object-fit:contain; margin-bottom:15px; border-radius: 20px;">
                     
                     <p><strong>조명</strong></p>
                     <p>당신의 조명 선호는 <span style="color: yellow;">${bestLighting}</span>입니다.</p>
@@ -184,7 +184,7 @@ if (results.lighting) {
           <div class="result-text" style="text-align:center;">
             <!-- 먼저 이미지 표시 -->
             <img src="${focalImg}" alt="${bestFocalPoint}" 
-                 style="width:300px; height:200px; object-fit:cover; margin-bottom:15px;">
+                 style="width:520px; height:400px; object-fit:cover; margin-bottom:15px; border-radius: 20px;">
 
             <p><strong>인테리어 포인트</strong></p>
             <p>당신의 인테리어 포인트는 <span style="color: yellow;">${bestFocalPoint}</span>입니다.</p>
@@ -223,7 +223,7 @@ if (results.lighting) {
           <div class="result-text" style="text-align:center;">
             <!-- 먼저 이미지 표시 -->
             <img src="${complexityImg}" alt="${bestComplexity}" 
-                 style="width:300px; height:200px; object-fit:cover; margin-bottom:15px;">
+                 style="width:520px; height:400px; object-fit:cover; margin-bottom:15px; border-radius: 20px;">
 
             <p><strong>복잡성</strong></p>
             <p>당신의 복잡성 선호는 <span style="color: yellow;">${bestComplexity}</span>입니다.</p>

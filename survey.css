@@ -23,6 +23,7 @@ h1 {
     color: black;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
     margin-bottom: 20px;
+    margin-top: -20px;
     display: none;
 }
 
@@ -34,9 +35,15 @@ h2 {
     display: none;
 }
 
+
 /* 작은 텍스트 스타일 */
 .small-text {
     font-size: 12px;
+    margin-right: 5px; /* 오른쪽 여백 조정으로 간격 좁히기 */
+}
+
+.small-text:last-child {
+    margin-top:-20px; /* 마지막 span의 오른쪽 여백 제거 */
 }
 
 /* 이미지 컨테이너 스타일 */
