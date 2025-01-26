@@ -123,12 +123,6 @@ button:hover {
     h1 {
         font-size: 2.2em;
     }
-      .result-text{
-        width:90%
-    }
-    .result-text img{
-        max-width: 90%;
-    }
 }
 
 /* 화면 너비 992px 이하일 때 */
@@ -149,14 +143,7 @@ button:hover {
     h1 {
         font-size: 2em;
     }
-    .result-text{
-        width:90%
-    }
-    .result-text img{
-        max-width: 90%;
-    }
 }
-
 
 /* 화면 너비 768px 이하일 때 */
 @media (max-width: 768px) {
@@ -170,19 +157,15 @@ button:hover {
         font-size: 1.5em;
     }
     .result-section {
-        width: 90%;
+        width: 100%;
     }
     .result-image img {
-        max-width: 90%;
+        max-width: 100%;
     }
     .result-text{
-        width:90%
-    }
-    .result-text img{
-        max-width: 90%;
+        width:100%
     }
 }
-
 /* 화면 너비 576px 이하일 때 */
 @media (max-width: 576px) {
     body {
@@ -195,19 +178,14 @@ button:hover {
         font-size: 1.3em;
     }
     .result-section {
-        width: 90%;
+        width: 100%;
     }
     .result-image img {
         max-width: 90%;
         border-radius: 5px;
     }
-    .result-text{
-        width:90%
-    }
-    .result-text img{
-        max-width: 90%;
-    }
 }
+
 
 @media (max-width: 400px) {
     body {
@@ -224,15 +202,9 @@ button:hover {
         padding: 12px 20px;
     }
     .result-section {
-        width: 90%
+        width: 100%
     }
     .result-image img{
-        max-width: 90%;
-    }
-    .result-text{
-        width:90%
-    }
-    .result-text img{
         max-width: 90%;
     }
 }
