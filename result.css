@@ -71,12 +71,6 @@ h3 {
 }
 
 /* 이미지 스타일 */
-.result-image {
-    width: 100%;
-    max-width: 520px; /* 기존 500px에서 20px 증가 */
-    text-align: center;
-}
-
 .result-image img {
     width: 80%; /* 기존 100%에서 80%로 변경 */
     max-width: 520px;
