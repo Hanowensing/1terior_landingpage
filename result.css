@@ -71,6 +71,12 @@ h3 {
 }
 
 /* 이미지 스타일 */
+.result-image {
+    width: 100%;
+    max-width: 520px; /* 기존 500px에서 20px 증가 */
+    height: auto;
+    border-radius: 10px;
+}
 
 
 /* 버튼 스타일 */
@@ -88,14 +94,6 @@ button {
 
 button:hover {
     background-color: #e76f51;
-}
-
-/* 이미지 스타일 */
-.result-image {
-    width: 520px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
 }
 
 /* ===============================
@@ -119,10 +117,6 @@ button:hover {
     h1 {
         font-size: 2.2em;
     }
-    .result-image {
-        width: 80%;
-        height: auto;
-    }
 }
 
 /* 화면 너비 992px 이하일 때 */
@@ -130,102 +124,76 @@ button:hover {
     body {
         margin: 10px 50px;
     }
-
     .results-container {
         flex-direction: column;
         align-items: center;
     }
-
     .result-section {
         width: 80%;
     }
-
+    .result-image {
+        max-width: 80%;
+    }
     h1 {
         font-size: 2em;
     }
- /* 이미지 너비 유지 */
- .result-image {
-    width: 80%;
-    height: auto;
 }
-}
+
 
 /* 화면 너비 768px 이하일 때 */
 @media (max-width: 768px) {
     body {
         margin: 10px 30px;
     }
-
     h1 {
         font-size: 1.8em;
     }
-
     h2 {
         font-size: 1.5em;
     }
-
     .result-section {
-        width: 80%;
+        width: 100%;
     }
- /* 이미지 너비 유지 */
- .result-image {
-    width: 80%;
-    height: auto;
+    .result-image {
+        max-width: 100%;
+    }
 }
-}
+
 /* 화면 너비 576px 이하일 때 */
 @media (max-width: 576px) {
     body {
         margin: 10px 15px;
     }
-
     h1 {
         font-size: 1.5em;
     }
-
     h2 {
         font-size: 1.3em;
     }
-
     .result-section {
         width: 100%;
     }
-
     .result-image img {
         border-radius: 5px;
     }
- /* 이미지 너비 유지 */
- .result-image {
-    width: 80%;
-    height: auto;
-}
 }
 
-/* 화면 너비 400px 이하일 때 */
 @media (max-width: 400px) {
     body {
         margin: 5px;
     }
-
     h1 {
         font-size: 1.3em;
     }
-
     h2 {
         font-size: 1.1em;
     }
-
     .result-section {
-        width: 80%;
+        width: 100%;
     }
-
     button {
         font-size: 1em;
         padding: 12px 20px;
     }
- /* 이미지 너비 유지 */
- .result-image {
-    width: 80%;
-    height: auto;
 }
-}
+
