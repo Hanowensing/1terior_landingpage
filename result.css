@@ -123,6 +123,9 @@ button:hover {
     h1 {
         font-size: 2.2em;
     }
+      .result-text{
+        width:90%
+    }
     .result-text img{
         max-width: 90%;
     }
@@ -146,8 +149,11 @@ button:hover {
     h1 {
         font-size: 2em;
     }
+    .result-text{
+        width:90%
+    }
     .result-text img{
-        max-width: 100%;
+        max-width: 90%;
     }
 }
 
@@ -164,13 +170,16 @@ button:hover {
         font-size: 1.5em;
     }
     .result-section {
-        width: 100%;
+        width: 90%;
     }
     .result-image img {
-        max-width: 100%;
+        max-width: 90%;
+    }
+    .result-text{
+        width:90%
     }
     .result-text img{
-        max-width: 100%;
+        max-width: 90%;
     }
 }
 
@@ -186,14 +195,17 @@ button:hover {
         font-size: 1.3em;
     }
     .result-section {
-        width: 100%;
+        width: 90%;
     }
     .result-image img {
         max-width: 90%;
         border-radius: 5px;
     }
+    .result-text{
+        width:90%
+    }
     .result-text img{
-        max-width: 100%;
+        max-width: 90%;
     }
 }
 
@@ -212,12 +224,15 @@ button:hover {
         padding: 12px 20px;
     }
     .result-section {
-        width: 100%
+        width: 90%
     }
     .result-image img{
         max-width: 90%;
     }
+    .result-text{
+        width:90%
+    }
     .result-text img{
-        max-width: 100%;
+        max-width: 90%;
     }
 }
