@@ -177,10 +177,10 @@ button:hover {
         font-size: 1.3em;
     }
     .result-section {
-        width: 80%;
+        width: 90%;
     }
     .result-image img {
-        max-width: 80%;
+        max-width: 90%;
         border-radius: 5px;
     }
 }
@@ -196,14 +196,21 @@ button:hover {
         font-size: 1.1em;
     }
     .result-section {
-        width: 95%;
+        width: 90%;
     }
-    button {
+    .button {
         font-size: 1em;
         padding: 12px 20px;
     }
     .result-image img{
-        max-width: 950%;
+        max-width: 90%;
+        border-radius: 5px;
+    }
+    .result-text{
+    width:90%;
+    }
+    .result-text img{
+        max-width: 90%;
         border-radius: 5px;
     }
 }

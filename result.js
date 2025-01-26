@@ -222,7 +222,7 @@ if (results.lighting) {
         <div class="result-section" style="width:70%; margin:0 auto; margin-bottom:40px;">
           <div class="result-text" style="text-align:center;">
             <!-- 먼저 이미지 표시 -->
-            <img src="${complexityImg}" alt="${bestComplexity}" class="oneimg"
+            <img src="${complexityImg}" alt="${bestComplexity}"
                  style="width:450px; height:350px; object-fit:cover; margin-bottom:15px; border-radius:20px;">
 
             <p><strong>복잡성</strong></p>
