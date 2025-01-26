@@ -13,8 +13,8 @@ body {
 
 /* 로딩 메시지 스타일 */
 #loadingMessage {
-    font-size: 1.5em; /* 로딩 메시지 크기 */
-    margin-top: 20px; /* 위쪽 여백 */
+    font-size: 1.5em;
+    margin-top: 20px;
 }
 
 /* 제목 및 부제목 스타일 */
@@ -22,16 +22,16 @@ h1 {
     font-size: 2.5em;
     color: black;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-    margin-bottom: 20px; /* h2와의 간격 유지 */
-    display: none; /* 초기에는 숨김 */
+    margin-bottom: 20px;
+    display: none;
 }
 
 h2 {
     font-size: 1.5em;
     color: black;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-    margin-bottom: 30px; /* 이미지와의 간격 유지 */
-    display: none; /* 초기에는 숨김 */
+    margin-bottom: 30px;
+    display: none;
 }
 
 /* 작은 텍스트 스타일 */
@@ -44,18 +44,17 @@ h2 {
     display: flex; /* Flexbox를 사용하여 이미지를 나란히 배치 */
     justify-content: center; /* 중앙 정렬 */
     align-items: center;
-    gap: 40px; /* 간격 증가 */
+    gap: 40px; /* 이미지 간 간격 */
     display: none; /* 초기에는 숨김 */
     max-width: 100%;
-    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
+    flex-wrap: nowrap; /* 반응형이 아닐 때는 나란히 배치 */
 }
 
-/* 이미지 스타일 */
+/* 이미지 스타일 (고정 크기 적용) */
 #styleImage, #styleImage2 {
-    width: 100%; /* 부모 요소에 맞게 크기 조정 */
-    max-width: 750px; /* 최대 너비 확대 */
-    height: auto; /* 비율 유지 */
-    object-fit: contain; /* 이미지가 잘리지 않도록 조정 */
+    width: 600px; /* 고정 너비 */
+    height: 400px; /* 고정 높이 */
+    object-fit: cover; /* 이미지가 비율을 유지하며 맞춤 */
     cursor: pointer;
     border: 2px solid #ddd;
     border-radius: 10px;
@@ -65,43 +64,17 @@ h2 {
    반응형 스타일 적용 
 ================================ */
 
-/* 화면 너비 1400px 이하일 때 */
-@media (max-width: 1400px) {
-    #styleImage, #styleImage2 {
-        max-width: 700px; /* 크기 조정 */
-    }
-}
-
-/* 화면 너비 1200px 이하일 때 */
-@media (max-width: 1200px) {
-    #styleImage, #styleImage2 {
-        max-width: 650px; /* 크기 조정 */
-    }
-}
-
 /* 화면 너비 992px 이하일 때 */
-@media (max-width: 992px) {
-    h1 {
-        display: none; /* 제목 숨김 */
-    }
-    h2 {
-        font-size: 1.4em;
-    }
-    #styleImage, #styleImage2 {
-        max-width: 600px; /* 크기 조정 */
-    }
-}
-
-/* 화면 너비 768px 이하일 때 */
 @media (max-width: 768px) {
     h2 {
         font-size: 1.2em;
     }
     #image-container {
-        flex-direction: column; /* 작은 화면에서는 세로로 배치 */
+        gap: 10px; /* 작은 화면에서는 간격 줄이기 */
     }
     #styleImage, #styleImage2 {
-        max-width: 90%; /* 이미지 크기 조정 */
+        width: 300px; /* 반응형일 때 이미지 크기 조정 */
+        height: 300px;
     }
 }
 
@@ -111,7 +84,8 @@ h2 {
         font-size: 1em;
     }
     #styleImage, #styleImage2 {
-        max-width: 95%; /* 이미지 크기 최대한 키우기 */
+        width: 300px;
+        height: 300px;
     }
 }
 
@@ -120,7 +94,12 @@ h2 {
     h2 {
         font-size: 0.9em;
     }
+    #image-container {
+        flex-wrap: nowrap; /* 작은 화면에서도 나란히 배치 유지 */
+        overflow-x: auto; /* 가로 스크롤 허용 */
+    }
     #styleImage, #styleImage2 {
-        max-width: 100%; /* 작은 화면에서는 100%로 설정 */
+        width: 300px;
+        height: 300px;
     }
 }
