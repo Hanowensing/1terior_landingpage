@@ -139,12 +139,14 @@ if (results.lighting) {
         const lightingImg = lightingImageMap[bestLighting] || 'default.jpg';
 
         resultText += `
-            <div class="result-section" style="width:100%; margin:0 auto; margin-bottom:40px;">
+            <div class="result_section" style="width:100%; margin:0 auto; margin-bottom:40px; justify-content:center; ">
+            <div class="result_image" style="justify-content: center; align-items:center;">
+             <img src="${lightingImg}" alt="${bestLighting}" class="oneimg"
+                         style="width:450px; height:350px; object-fit:contain; margin-bottom:15px; border-radius:20px;">
+              </div>  
+
                 <div class="result-text" style="text-align:center;">
                     <!-- 이미지 크기를 600x400으로 2배 확대 -->
-                    <img src="${lightingImg}" alt="${bestLighting}" class="oneimg"
-                         style="width:450px; height:350px; object-fit:contain; margin-bottom:15px; border-radius:20px;">
-                    
                     <p><strong>조명</strong></p>
                     <p>당신의 조명 선호는 <span style="color: yellow;">${bestLighting}</span>입니다.</p>
                     <p>${lightingMessage}</p>
@@ -180,12 +182,13 @@ if (results.lighting) {
       const focalImg = focalPointImageMap[bestFocalPoint] || 'default.jpg';
 
       resultText += `
-        <div class="result-section" style="width: 100%; margin:0 auto; margin-bottom:40px;">
-          <div class="result-text" style="text-align:center;">
-            <!-- 먼저 이미지 표시 -->
+        <div class="result_section" style="width: 100%; margin:0 auto; margin-bottom:40px; justify-content:center;">
+        <div class="result_image" style="justify-content: center; align-items:center;">
             <img src="${focalImg}" alt="${bestFocalPoint}" class="oneimg"
                  style="width:450px; height:350px; object-fit:cover; margin-bottom:15px; border-radius:20px;">
+                 </div>
 
+          <div class="result-text" style="text-align:center;">
             <p><strong>인테리어 포인트</strong></p>
             <p>당신의 인테리어 포인트는 <span style="color: yellow;">${bestFocalPoint}</span>입니다.</p>
             <p>${focalMsg}</p>
@@ -219,12 +222,13 @@ if (results.lighting) {
       const complexityImg = complexityImageMap[bestComplexity] || 'default.jpg';
 
       resultText += `
-        <div class="result-section" style="width:100%; margin:0 auto; margin-bottom:40px;">
-          <div class="result-text" style="text-align:center;">
-            <!-- 먼저 이미지 표시 -->
+        <div class="result_section" style="width:100%; margin:0 auto; margin-bottom:40px; justify-content:center;">
+        <div class="result_image" style="justify-content: center; align-items:center;">
             <img src="${complexityImg}" alt="${bestComplexity}"
-                 style="width:450px; height:350px; object-fit:cover; margin-bottom:15px; border-radius:20px;">
+                 style="width:450px; height:450px; object-fit:cover; margin-bottom:15px; border-radius:20px;">
+                 </div>
 
+           <div class="result-text" style="text-align:center;">
             <p><strong>복잡성</strong></p>
             <p>당신의 복잡성 선호는 <span style="color: yellow;">${bestComplexity}</span>입니다.</p>
             <p>${complexMsg}</p>

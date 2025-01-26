@@ -42,6 +42,7 @@ h3 {
     text-align: center;
 }
 
+
 /* 결과 컨테이너 스타일 */
 .results-container {
     width: 100%;
@@ -64,6 +65,15 @@ h3 {
     max-width: 520px; /* 기존 500px에서 20px 증가 */
 }
 
+.result_section {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 520px; /* 기존 500px에서 20px 증가 */
+}
 /* 텍스트 스타일 */
 .result-text {
     text-align: center;
@@ -80,6 +90,17 @@ h3 {
     text-align: center;
     margin: 0 auto;
 }
+
+.result_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 520px; /* 기존 500px에서 20px 증가 */
+    text-align: center;
+    margin: 0 auto;
+}
+
 
 
 /* 버튼 스타일 */
@@ -156,6 +177,10 @@ button:hover {
     h2 {
         font-size: 1.5em;
     }
+    .results-container {
+        flex-direction: column;
+        align-items: center;
+    }
     .result-section {
         width: 100%;
     }
@@ -176,6 +201,10 @@ button:hover {
     }
     h2 {
         font-size: 1.3em;
+    }
+    .results-container {
+        flex-direction: column;
+        align-items: center;
     }
     .result-section {
         width: 100%;
@@ -201,10 +230,14 @@ button:hover {
         font-size: 1em;
         padding: 12px 20px;
     }
-    .result-section {
-        width: 100%
+    .results-container {
+        flex-direction: column;
+        align-items: center;
     }
     .result-image img{
+        max-width: 90%;
+    }
+     .result-image img{
         max-width: 90%;
     }
 }
