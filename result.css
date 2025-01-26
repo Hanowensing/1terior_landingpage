@@ -198,9 +198,16 @@ button:hover {
     .result-section {
         width: 95%;
     }
+    .result-text{
+        width:95%;
+    }
     button {
         font-size: 1em;
         padding: 12px 20px;
+    }
+    .result-text img{
+        max-width: 95%;
+        border-radius: 5px;
     }
     .result-image img{
         max-width: 95%;
