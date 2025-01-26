@@ -71,13 +71,7 @@ h3 {
 }
 
 /* 이미지 스타일 */
-.result-image img {
-    width: 80%; /* 기존 100%에서 80%로 변경 */
-    max-width: 520px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+
 
 /* 버튼 스타일 */
 button {
@@ -94,6 +88,14 @@ button {
 
 button:hover {
     background-color: #e76f51;
+}
+
+/* 이미지 스타일 */
+.result-image {
+    width: 520px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* ===============================
@@ -117,8 +119,9 @@ button:hover {
     h1 {
         font-size: 2.2em;
     }
-    .result-image img {
+    .result-image {
         width: 80%;
+        height: auto;
     }
 }
 
@@ -141,8 +144,9 @@ button:hover {
         font-size: 2em;
     }
  /* 이미지 너비 유지 */
- .result-image img {
+ .result-image {
     width: 80%;
+    height: auto;
 }
 }
 
@@ -164,11 +168,11 @@ button:hover {
         width: 80%;
     }
  /* 이미지 너비 유지 */
- .result-image img {
+ .result-image {
     width: 80%;
+    height: auto;
 }
 }
-
 /* 화면 너비 576px 이하일 때 */
 @media (max-width: 576px) {
     body {
@@ -191,8 +195,9 @@ button:hover {
         border-radius: 5px;
     }
  /* 이미지 너비 유지 */
- .result-image img {
+ .result-image {
     width: 80%;
+    height: auto;
 }
 }
 
@@ -219,7 +224,8 @@ button:hover {
         padding: 12px 20px;
     }
  /* 이미지 너비 유지 */
- .result-image img {
+ .result-image {
     width: 80%;
+    height: auto;
 }
 }
