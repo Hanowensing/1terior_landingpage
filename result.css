@@ -206,12 +206,10 @@ button:hover {
         max-width: 90%;
         border-radius: 5px;
     }
-    .result-text{
-    width:90%;
-    }
     .result-text img{
         max-width: 90%;
         border-radius: 5px;
+
     }
 }
 
