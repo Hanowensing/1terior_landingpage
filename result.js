@@ -139,7 +139,7 @@ if (results.lighting) {
         const lightingImg = lightingImageMap[bestLighting] || 'default.jpg';
 
         resultText += `
-            <div class="result-section" style="width:70%; margin:0 auto; margin-bottom:40px;">
+            <div class="result-section" style="width:100%; margin:0 auto; margin-bottom:40px;">
                 <div class="result-text" style="text-align:center;">
                     <!-- 이미지 크기를 600x400으로 2배 확대 -->
                     <img src="${lightingImg}" alt="${bestLighting}" class="oneimg"
@@ -180,7 +180,7 @@ if (results.lighting) {
       const focalImg = focalPointImageMap[bestFocalPoint] || 'default.jpg';
 
       resultText += `
-        <div class="result-section" style="width:50%; margin:0 auto; margin-bottom:40px;">
+        <div class="result-section" style="width: 100%; margin:0 auto; margin-bottom:40px;">
           <div class="result-text" style="text-align:center;">
             <!-- 먼저 이미지 표시 -->
             <img src="${focalImg}" alt="${bestFocalPoint}" class="oneimg"
@@ -219,7 +219,7 @@ if (results.lighting) {
       const complexityImg = complexityImageMap[bestComplexity] || 'default.jpg';
 
       resultText += `
-        <div class="result-section" style="width:70%; margin:0 auto; margin-bottom:40px;">
+        <div class="result-section" style="width:100%; margin:0 auto; margin-bottom:40px;">
           <div class="result-text" style="text-align:center;">
             <!-- 먼저 이미지 표시 -->
             <img src="${complexityImg}" alt="${bestComplexity}"

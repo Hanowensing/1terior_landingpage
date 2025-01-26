@@ -123,6 +123,9 @@ button:hover {
     h1 {
         font-size: 2.2em;
     }
+    .result-text img{
+        max-width: 90%;
+    }
 }
 
 /* 화면 너비 992px 이하일 때 */
@@ -143,6 +146,9 @@ button:hover {
     h1 {
         font-size: 2em;
     }
+    .result-text img{
+        max-width: 100%;
+    }
 }
 
 
@@ -158,10 +164,13 @@ button:hover {
         font-size: 1.5em;
     }
     .result-section {
-        width: 90%;
+        width: 100%;
     }
     .result-image img {
-        max-width: 90%;
+        max-width: 100%;
+    }
+    .result-text img{
+        max-width: 100%;
     }
 }
 
@@ -177,11 +186,14 @@ button:hover {
         font-size: 1.3em;
     }
     .result-section {
-        width: 90%;
+        width: 100%;
     }
     .result-image img {
         max-width: 90%;
         border-radius: 5px;
+    }
+    .result-text img{
+        max-width: 100%;
     }
 }
 
@@ -200,9 +212,12 @@ button:hover {
         padding: 12px 20px;
     }
     .result-section {
-        width: 90%
+        width: 100%
     }
     .result-image img{
         max-width: 90%;
+    }
+    .result-text img{
+        max-width: 100%;
     }
 }
