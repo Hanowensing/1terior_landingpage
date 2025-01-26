@@ -177,6 +177,7 @@ button:hover {
         width: 100%;
     }
     .result-image img {
+        max-width: 60%;
         border-radius: 5px;
     }
 }
@@ -199,6 +200,7 @@ button:hover {
         padding: 12px 20px;
     }
     .result-image img {
+        max-width: 60%;
         border-radius: 5px;
     }
 }
