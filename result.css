@@ -78,7 +78,7 @@ h3 {
 }
 
 .result-image img {
-    width: 100%;
+    width: 80%; /* 기존 100%에서 80%로 변경 */
     max-width: 520px;
     height: auto;
     border-radius: 10px;
@@ -123,6 +123,9 @@ button:hover {
     h1 {
         font-size: 2.2em;
     }
+    .result-image img {
+        width: 80%;
+    }
 }
 
 /* 화면 너비 992px 이하일 때 */
@@ -143,6 +146,10 @@ button:hover {
     h1 {
         font-size: 2em;
     }
+ /* 이미지 너비 유지 */
+ .result-image img {
+    width: 80%;
+}
 }
 
 /* 화면 너비 768px 이하일 때 */
@@ -162,6 +169,10 @@ button:hover {
     .result-section {
         width: 80%;
     }
+ /* 이미지 너비 유지 */
+ .result-image img {
+    width: 80%;
+}
 }
 
 /* 화면 너비 576px 이하일 때 */
@@ -185,6 +196,10 @@ button:hover {
     .result-image img {
         border-radius: 5px;
     }
+ /* 이미지 너비 유지 */
+ .result-image img {
+    width: 80%;
+}
 }
 
 /* 화면 너비 400px 이하일 때 */
@@ -209,4 +224,8 @@ button:hover {
         font-size: 1em;
         padding: 12px 20px;
     }
+ /* 이미지 너비 유지 */
+ .result-image img {
+    width: 80%;
+}
 }
