@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>유료 서비스 안내</title>
+    <title>서비스 안내</title>
     <link rel="stylesheet" href="money.css">
     <style>
         body {
@@ -48,18 +48,77 @@
             font-weight: bold;
             margin: 10px 0;
         }
+        .image-gallery {
+            display: flex;
+        justify-content: center; /* 이미지 사이 간격 조정 */
+        align-items: center;
+        gap: 10px; /* 이미지 간격 */
+        flex-wrap: wrap; /* 화면 크기에 따라 자동 줄바꿈 */
+        max-width: 100%; /* 부모 크기를 초과하지 않도록 설정 */
+    }
+
+    .image-gallery figure {
+        justify-content: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .premium-image {
+        max-width: 200px; /* 이미지 크기 조정 */
+        height: auto; /* 비율 유지 */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .premium-caption {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #2c3e50;
+    }
+
+    figcaption {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 8px;
+        color: #555;
+    }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>유료 서비스 안내</h1>
-    <p>여기까지는 무료 버전입니다. 인테리어 의뢰서를 제작하려면 아래 요금제를 선택하세요.</p>
+    <h1>서비스 안내</h1>
+    <p>여기까지는 무료 버전입니다. 인테리어 의뢰서를 제작하려면 아래 요금제를 선택해주세요.</p>
     
     <ul>
         <li>기본 버전: 5,000원  (단순한 도면)</li>
         <li>프리미엄 버전: 10,000원  (상세 도면+인테리어 제안서)</li>
     </ul>
+
+    
+    <div class="image-gallery">
+        <figure>
+            <img src="기본.png" alt="고급 서비스" class="premium-image">
+            <figcaption>기본1</figcaption>
+        </figure>
+        <figure>
+            <img src="기본1.png" alt="고급 서비스 1" class="premium-image">
+            <figcaption>기본2</figcaption>
+        </figure>
+    </div>
+
+    <div class="image-gallery">
+        <figure>
+            <img src="고급3.png" alt="고급 서비스" class="premium-image">
+            <figcaption>프리미엄1</figcaption>
+        </figure>
+        <figure>
+            <img src="고급2.png" alt="고급 서비스 1" class="premium-image">
+            <figcaption>프리미엄2</figcaption>
+        </figure>
+    </div>
 
     <p>
         저희 <strong>원테리어</strong>는 창업을 준비 중인 팀으로써
@@ -91,20 +150,20 @@
     <div class="payment-info">
         <br> 
         <p>입금 계좌: <strong>356-1488-8305-13 (한형준)</strong></p>
-        <p>입금 확인 후 <strong>유료 서비스 전용 웹사이트가 발송됩니다.</strong></p>
+        <p>입금 확인 후 <strong>이메일로 유료 서비스 전용 웹사이트가 발송됩니다.</strong></p>
     
         <!-- ID를 추가하여 JS에서 쉽게 선택 가능하게 함 -->
         <form id="paymentForm" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
             <div style="display: flex; align-items: center; gap: 10px;">
                 <label for="name" style="font-weight: bold;">이름:</label>
                 <input type="text" id="name" name="name" required placeholder="홍길동" 
-                    style="padding: 10px; width: 300px; border: 1px solid #ddd; border-radius: 5px;">
+                    style="padding: 10px; width: 150px; border: 1px solid #ddd; border-radius: 5px;">
             </div>
     
             <div style="display: flex; align-items: center; gap: 10px;">
-                <label for="email" style="font-weight: bold;">이메일 주소:</label>
+                <label for="email" style="font-weight: bold;">email:</label>
                 <input type="email" id="email" name="email" required placeholder="example@email.com"
-                    style="padding: 10px; width: 300px; border: 1px solid #ddd; border-radius: 5px;">
+                    style="padding: 10px; width: 150px; border: 1px solid #ddd; border-radius: 5px;">
             </div>
     
             <button type="submit"
