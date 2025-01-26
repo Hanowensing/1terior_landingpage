@@ -117,8 +117,8 @@ button:hover {
         flex: 1 1 calc(50% - 15px);
         width: 100%
     }
-    .result-image {
-        max-width: 100%;
+    .result-image img {
+        width: 100%;
     }
     h1 {
         font-size: 2.2em;
@@ -137,8 +137,8 @@ button:hover {
     .result-section {
         width: 100%
     }
-    .result-image {
-        max-width: 100%;
+    .result-image img {
+        width: 100%;
     }
     h1 {
         font-size: 2em;
@@ -158,10 +158,10 @@ button:hover {
         font-size: 1.5em;
     }
     .result-section {
-        width: 100%;
+        width: 90%;
     }
-    .result-image {
-        max-width: 100%;
+    .result-image img {
+        max-width: 90%;
     }
 }
 
@@ -200,9 +200,9 @@ button:hover {
         padding: 12px 20px;
     }
     .result-section {
-        width: 100%
+        width: 90%
     }
-    .result-image {
-        max-width: 100%;
+    .result-image img{
+        max-width: 90%;
     }
 }
