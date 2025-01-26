@@ -125,9 +125,10 @@ button:hover {
     }
 
     .result-image img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover; /* 비율 유지 및 크기 조정 */
+        width: 80%;  /* 화면의 80%만 차지 */
+        max-width: 450px;  /* 최대 크기 제한 */
+        height: auto;  /* 높이 자동 조정 */
+        object-fit: cover;
     }
 }
 
@@ -150,9 +151,10 @@ button:hover {
     }
 
     .result-image img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover; /* 비율 유지 및 크기 조정 */
+        width: 80%;  /* 화면의 80%만 차지 */
+        max-width: 400px;  /* 최대 크기 제한 */
+        height: auto;
+        object-fit: cover;
     }
 
     .result-image img {
@@ -179,9 +181,10 @@ button:hover {
     }
 
     .result-image img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover; /* 비율 유지 및 크기 조정 */
+        width: 100%;  /* 작은 화면에서는 100%로 조정 */
+        max-width: 350px;
+        height: auto;
+        object-fit: cover;
     }
 
     .button {
