@@ -185,7 +185,7 @@ if (results.lighting) {
         <div class="result_section" style="width: 100%; margin:0 auto; margin-bottom:40px; justify-content:center;">
         <div class="result_image" style="justify-content: center; align-items:center;">
             <img src="${focalImg}" alt="${bestFocalPoint}" class="oneimg"
-                 style="width:450px; height:350px; object-fit:cover; margin-bottom:15px; border-radius:20px;">
+                 style="width:400px; height:350px; object-fit:cover; margin-bottom:15px; border-radius:20px;">
                  </div>
 
           <div class="result-text" style="text-align:center;">
@@ -225,7 +225,7 @@ if (results.lighting) {
         <div class="result_section" style="width:100%; margin:0 auto; margin-bottom:40px; justify-content:center;">
         <div class="result_image" style="justify-content: center; align-items:center;">
             <img src="${complexityImg}" alt="${bestComplexity}"
-                 style="width:450px; height:450px; object-fit:cover; margin-bottom:15px; border-radius:20px;">
+                 style="width:450px; height:500px; object-fit:cover; margin-bottom:15px; border-radius:20px;">
                  </div>
 
            <div class="result-text" style="text-align:center;">
